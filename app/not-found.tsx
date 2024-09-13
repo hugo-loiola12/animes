@@ -23,7 +23,7 @@ const NotFound = () => {
 
 const styles = {
   container: {
-    textAlign: "center",
+    TextAlign: "center",
     padding: "50px",
     fontFamily: "monospace",
     color: "#333",
