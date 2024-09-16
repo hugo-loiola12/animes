@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Favicon from "../app/data/icon/icon.png";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import "./styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Animes do Hugo",
@@ -16,20 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body style={{ margin: 0, fontFamily: "Inter, sans-serif" }}>
+      <body className="dark bg-current">
         <Header />
-        <div
-          style={{
-            minHeight: "100vh",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {children}
-        </div>
-        <div style={{ marginTop: "auto" }}>
-          <Footer />
-        </div>
+        <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );

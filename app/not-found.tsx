@@ -1,55 +1,28 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { CSSProperties } from "react";
-import Gif from "../app/data/imgs/2594596_3e505.gif";
-
-const NotFound = () => {
+export default function Example() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.errorCode}>Erro 404</h1>
-      <h3 style={styles.message}>Oops! Página não encontrada.</h3>
-      <Image src={Gif} alt="Page not found" width={150} height={150} />
-      <p style={styles.text}>
-        Parece que a página que você está procurando não existe.
-      </p>
-      <Link href={"/"} style={styles.button}>
-        Voltar para a página inicial
-      </Link>
-    </div>
+    <>
+      <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="text-center">
+          <p className="text-base font-semibold text-indigo-600">404</p>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Página não encontrada!
+          </h1>
+          <p className="mt-6 text-base leading-7 text-gray-600">
+            Desculpe, não encontramdos o que você estava procurando.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/"
+              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Voltar
+            </a>
+            <a href="#" className="text-sm font-semibold text-gray-900">
+              Chamar suporte <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </main>
+    </>
   );
-};
-
-const styles: { [key: string]: CSSProperties } = {
-  container: {
-    textAlign: "center",
-    padding: "50px",
-    fontFamily: "system-ui",
-    color: "#333",
-  },
-  errorCode: {
-    fontSize: "96px",
-    margin: "0",
-    color: "#FF6347",
-    fontFamily: "monospace",
-  },
-  message: {
-    fontSize: "24px",
-    margin: "10px 0 20px 0",
-  },
-  text: {
-    fontSize: "18px",
-    margin: "20px 0",
-  },
-  button: {
-    padding: "10px 20px",
-    fontSize: "16px",
-    backgroundColor: "#FF6347",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    transition: "background-color 0.1s ease",
-  },
-};
-
-export default NotFound;
+}
