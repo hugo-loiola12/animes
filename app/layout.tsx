@@ -17,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body style={{ margin: 0, fontFamily: "Inter, sans-serif" }}>
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         <Header />
         <div
           style={{
