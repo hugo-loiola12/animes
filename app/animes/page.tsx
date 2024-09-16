@@ -1,21 +1,31 @@
 import React from "react";
+import CardAnime from "@/app/components/CardAnime";
+import Link from "next/link";
 
-// app/page.js
 export default async function Page() {
+  // Buscando dados da API Jikan
   const response = await fetch("https://api.jikan.moe/v4/seasons/now");
   const data = await response.json();
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  return <ul>
-	{/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-	{data.data.map((item: {
-	  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	  mal_id: React.Key | null | undefined; // @ts-expect-error
-	  title: string | number | bigint | boolean | React.ReactElement<never, string | React.JSXElementConstructor<never>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined;
-	}) => {
-	  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	  // @ts-expect-error
-	  return <li key={item.mal_id}><h1 className="text-center text-white"> {item.title}</h1></li>;
-	})}
-  </ul>;
+
+  return (
+	<div className="flex flex-wrap justify-evenly gap-4 py-8">
+	  {data.data.map((item: {
+		mal_id: React.Key | null | undefined;
+		title: never;
+		synopsis: never;
+		images: { jpg: { large_image_url: never; }; };
+	  }) => (
+		<Link href={`/animes/${item.mal_id}`} key={item.mal_id}>
+		  {/* Garantir que o conteúdo dentro de Link seja apenas um elemento */}
+		  <div>
+			<CardAnime
+			  titulo={item.title}
+			  descricao={item.synopsis || "Descrição não disponível"} // Prevenindo caso a sinopse esteja ausente
+			  imagem={item.images.jpg.large_image_url}
+			/>
+		  </div>
+		</Link>
+	  ))}
+	</div>
+  );
 }

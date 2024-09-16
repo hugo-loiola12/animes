@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Img1 from "./data/imgs/anime-8801333_1280.webp"
+import Img2 from "./data/imgs/oshi-no-ko-capa.jpg"
+import Img3 from "./data/imgs/360_F_562024161_tGM4lFlnO0OczLYHFFuNNdMUTG9ekHxb.jpg"
 
 const Home = () => {
   return (
@@ -23,21 +25,11 @@ const Home = () => {
 	  </p>
 	  <div className="flex flex-wrap justify-center p-5 sm:p-10">
 		<div className="w-full sm:w-1/3 p-2">
-		  <div>
+		  <div
+			className="h-64 w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
 			<Image
 			  layout="fill"
-			  className="h-64 w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-			  src={''}
-			  alt="image description"
-			/>
-		  </div>
-		</div>
-		<div className="w-full sm:w-1/3 p-2">
-		  <div>
-			<Image
-			  layout="fill"
-			  className="h-64 w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-			  src={''}
+			  src={Img1}
 			  alt="image description"
 			/>
 		  </div>
@@ -47,11 +39,20 @@ const Home = () => {
 			className="h-64 w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
 			<Image
 			  layout="fill"
-			  src={Img1}
+			  src={Img2}
 			  alt="image description"
 			/>
 		  </div>
-
+		</div>
+		<div className="w-full sm:w-1/3 p-2">
+		  <div
+			className="h-64 w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
+			<Image
+			  layout="fill"
+			  src={Img3}
+			  alt="image description"
+			/>
+		  </div>
 		</div>
 	  </div>
 	</div>
