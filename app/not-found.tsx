@@ -1,6 +1,10 @@
+import Link from "next/link";
+import Image from "next/image";
+import GoJo from "./data/imgs/2594596_3e505.gif"
+
 export default function Example() {
   return (
-	<div>
+	<div className="font-mono">
 	  <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<div className="text-center">
 		  <p className="text-base font-semibold text-indigo-600">404</p>
@@ -10,16 +14,17 @@ export default function Example() {
 		  <p className="mt-6 text-base leading-7 text-gray-600">
 			Desculpe, não encontramdos o que você estava procurando.
 		  </p>
+		  <Image src={GoJo} alt="Teste"/>
 		  <div className="mt-10 flex items-center justify-center gap-x-6">
-			<a
+			<Link
 			  href="/"
 			  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 			>
 			  Voltar
-			</a>
-			<a href="#" className="text-sm font-semibold text-gray-900">
+			</Link>
+			<Link href="#" className="text-sm font-semibold text-gray-900">
 			  Chamar suporte <span aria-hidden="true">&rarr;</span>
-			</a>
+			</Link>
 		  </div>
 		</div>
 	  </main>
