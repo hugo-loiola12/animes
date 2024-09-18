@@ -12,6 +12,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)"],
+        titulo: ["var(--font-frauces)"],
         mono: ["var(--font-roboto-mono)"],
       },
       colors: {
