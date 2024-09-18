@@ -3,6 +3,13 @@ import Favicon from "../app/data/icon/icon.png";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./styles/globals.css";
+import { Inter } from "next/font/google";
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Animes do Hugo",
@@ -17,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="dark bg-current">
+      <body className={`dark bg-current ${inter.variable} font-sans`}>
         <Header />
         <div>{children}</div>
         <Footer />
