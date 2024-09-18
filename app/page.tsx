@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Img3 from "./data/imgs/360_F_562024161_tGM4lFlnO0OczLYHFFuNNdMUTG9ekHxb.jpg"
+import Img1 from "./data/imgs/anime-8801333_1280.webp";
+import Img2 from "./data/imgs/360_F_562024161_tGM4lFlnO0OczLYHFFuNNdMUTG9ekHxb.jpg";
+import Img3 from "./data/imgs/oshi-no-ko-capa.jpg";
 
 const Home = () => {
   return (
@@ -28,7 +30,7 @@ const Home = () => {
 			className="h-64 w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
 			<Image
 			  layout="fill"
-			  src={Img3}
+			  src={Img1}
 			  alt="image description"
 			/>
 		  </div>
@@ -38,7 +40,7 @@ const Home = () => {
 			className="h-64 w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
 			<Image
 			  layout="fill"
-			  src={Img3}
+			  src={Img2}
 			  alt="image description"
 			/>
 		  </div>
