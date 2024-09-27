@@ -4,7 +4,6 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-frauces",
 });
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 export default function CardAnime({ titulo, imagem, data, nota }) {
   return (
