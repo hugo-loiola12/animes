@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 
 export default function MangaList() {
   const [mangas, setMangas] = useState([]);
-  const [_, setLoading] = useState(true);
-  const [__, setError] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   // Buscando dados da API Jikan para mangás da temporada
   useEffect(() => {
