@@ -52,7 +52,7 @@ export default async function AnimeDetail() {
           <p className="mt-2">
             Gêneros:{" "}
             {data.data.genres
-              .map((genre: { name: any }) => genre.name)
+              .map((genre: { name: never }) => genre.name)
               .join(", ") || "Gêneros não disponíveis."}
           </p>
         </div>
