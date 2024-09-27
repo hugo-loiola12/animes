@@ -11,8 +11,8 @@ export default async function Page() {
     <div className="flex flex-wrap justify-evenly gap-4 py-8">
       {data.data.map(
         (item: {
-          aired: string;
-          from: string;
+          year: never;
+          score: never;
           mal_id: React.Key | null | undefined;
           title: never;
           synopsis: never;
