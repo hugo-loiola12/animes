@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./styles/globals.css";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
+import Loading from "./components/Loading";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
@@ -25,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`dark bg-current ${inter.variable} font-sans`}>
-        <Header />
-        <div>{children}</div>
-        <Footer />
+        <Suspense fallback={<Loading />}>
+          <Header />
+          <div>{children}</div>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );
