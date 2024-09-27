@@ -10,6 +10,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+        titulo: ["var(--font-frauces)"],
+        mono: ["var(--font-roboto-mono)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
