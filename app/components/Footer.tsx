@@ -3,15 +3,17 @@
 import Link from "next/link";
 import React from "react";
 
+const ano = new Date();
+let anoAtual = ano.getFullYear();
 const footer = () => {
   return (
     <>
       <footer className="bg-white rounded-lg shadow m-4 dark:bg-gray-900">
         <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © {anoAtual}{" "}
             <Link href="https://flowbite.com/" className="hover:underline">
-              Flowbite™
+              AnimesHugo™
             </Link>
             . All Rights Reserved.
           </span>
