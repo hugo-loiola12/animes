@@ -1,5 +1,5 @@
 import React from "react";
-import CardAnime from "@/app/components/CardAnime";
+import Card from "@/app/components/Card";
 import Link from "next/link";
 
 export default async function Page() {
@@ -21,7 +21,7 @@ export default async function Page() {
           <Link href={`/animes/${item.mal_id}`} key={item.mal_id}>
             {/* Garantir que o conteúdo dentro de Link seja apenas um elemento */}
             <div>
-              <CardAnime
+              <Card
                 titulo={item.title}
                 imagem={item.images.jpg.large_image_url}
                 data={item.year}
