@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 const ano = new Date();
-let anoAtual = ano.getFullYear();
+const anoAtual = ano.getFullYear();
 const footer = () => {
   return (
     <>

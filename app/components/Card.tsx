@@ -6,7 +6,7 @@ const fraunces = Fraunces({
 });
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-export default function CardAnime({ titulo, imagem, data, nota }) {
+export default function Card({ titulo, imagem, data, nota }) {
   return (
     <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-white">
       <img
