@@ -9,16 +9,15 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation"; // Adicionando a importação do usePathname
 import clsx from "clsx";
+
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, Logo } from "@/components/icons";
+import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -29,7 +28,6 @@ export const Navbar = () => {
       isBlurred
       isBordered
       maxWidth="xl"
-      position="sticky"
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -46,6 +44,7 @@ export const Navbar = () => {
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => {
             const isActive = pathname === item.href; // Verificando se o item está ativo
+
             return (
               <NavbarItem key={item.href}>
                 <NextLink
@@ -55,6 +54,7 @@ export const Navbar = () => {
                   )}
                   color={isActive ? "primary" : "foreground"}
                   href={item.href}
+                  title={item.label}
                 >
                   {item.label}
                 </NextLink>
