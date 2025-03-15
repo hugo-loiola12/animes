@@ -2,7 +2,6 @@ import React from "react";
 
 import { title } from "@/components/primitives";
 
-
 const page = () => {
   return (
     <div>
