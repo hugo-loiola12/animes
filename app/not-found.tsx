@@ -15,7 +15,7 @@ const NotFound = () => {
         <h1 className={title({ color: "yellow" })}>404</h1>
         <h2 className={subtitle()}>Página Não Encontrada</h2>
 
-        <p className={subtitle({ className: "mt-4" })}>
+        <p className={subtitle({ className: "mt-4 font-mono" })}>
           Desculpe, não conseguimos encontrar a página que você está procurando.
         </p>
 
