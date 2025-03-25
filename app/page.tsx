@@ -1,6 +1,7 @@
 import React from "react";
 
 import { subtitle, title } from "@/components/primitives";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -9,12 +10,12 @@ const page = () => {
         <div className="inline-block max-w-lg text-center justify-center">
           <h1 className={title({ color: "blue" })}>Animes do Hugo</h1>
           <h2 className={subtitle()}>
-            {" "}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel qui
             voluptas eum adipisci alias nemo dolore libero magnam porro quod,
             odit sapiente modi, quos nesciunt reprehenderit similique aspernatur
-            tenetur? Nemo!{" "}
+            tenetur? Nemo!
           </h2>
+          <Image src={""} alt="Anime Principal" />
         </div>
       </section>
     </div>

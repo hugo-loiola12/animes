@@ -12,7 +12,7 @@ const NotFound = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
       <div className="max-w-md space-y-8">
-        <h1 className={title({ color: "yellow" })}>404</h1>
+        <h1 className={title({ color: "blue" })}>404</h1>
         <h2 className={subtitle()}>Página Não Encontrada</h2>
 
         <p className={subtitle({ className: "mt-4 font-mono" })}>
