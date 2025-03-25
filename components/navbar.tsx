@@ -52,7 +52,9 @@ export const Navbar = () => {
                     linkStyles({ color: isActive ? "primary" : "foreground" }),
                     "data-[active=true]:text-primary data-[active=true]:font-medium"
                   )}
-                  color={isActive ? "primary" : "foreground"}
+                  style={{
+                    color: isActive ? "#0072F5" : "var(--color-foreground",
+                  }}
                   href={item.href}
                   title={item.label}
                 >

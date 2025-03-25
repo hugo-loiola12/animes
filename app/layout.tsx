@@ -56,7 +56,7 @@ export default function RootLayout({
                   title="Hugo Loiola"
                 >
                   <span className="text-default-600">Feito por</span>
-                  <p className="text-primary">Hugo</p>
+                  <p style={{ color: "#b249f8" }}>Hugo</p>
                 </Link>
                 <div className="hidden sm:block text-default-600">•</div>
                 <div className="flex items-center gap-1 text-current">
